@@ -6,6 +6,8 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 
 const loginRouter = require("./router/loginRouter");
+const userRouter = require("./router/userRouter");
+const inboxRouter = require("./router/inboxRouter");
 
 // internal import
 const {notFoundHandler, errorHandler}=require("./middlewares/common/errorHandler");
@@ -42,7 +44,7 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 //routing setup
 app.use('/', loginRouter);
 app.use('/user', userRouter);
-// app.use('/inbox', inboxRouter);
+app.use('/inbox', inboxRouter);
 
 // error handler
 // 404 not found handler
