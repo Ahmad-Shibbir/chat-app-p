@@ -40,6 +40,9 @@ app.use(express.static(path.join(__dirname,"public" )));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 
 //routing setup
+app.use('/', loginRouter);
+// app.use('/user', userRouter);
+// app.use('/inbox', inboxRouter);
 
 // error handler
 // 404 not found handler
