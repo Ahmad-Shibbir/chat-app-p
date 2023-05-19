@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 
+const loginRouter = require("./router/loginRouter");
+
 // internal import
 const {notFoundHandler, errorHandler}=require("./middlewares/common/errorHandler");
 
